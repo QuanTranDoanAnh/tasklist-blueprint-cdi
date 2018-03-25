@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name="tasklist-cdi-1.0.0.SNAPSHOT" xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.3.0 http://karaf.apache.org/xmlns/features/v1.3.0">
+    <repository>mvn:org.apache.cxf.karaf/apache-cxf/3.2.1/xml/features</repository>
+    <repository>mvn:org.ops4j.pax.jdbc/pax-jdbc-features/1.2.1/xml/features</repository>
+
+    <feature name="example-tasklist-cdi-persistence" version="1.0.0.SNAPSHOT">
+        <feature>pax-jdbc-h2</feature>
+        <feature>pax-jdbc-config</feature>
+        <feature>pax-jdbc-pool-dbcp2</feature>
+        <feature>jndi</feature>
+        <feature>transaction</feature>
+        <feature version="[2.2, 3)">jpa</feature>
+        <feature version="[4.3, 6)">hibernate</feature>
+        <bundle>mvn:net.lr.tasklist.blueprint.cdi/tasklist-cdi-model/1.0.0.SNAPSHOT</bundle>
+        <bundle>mvn:net.lr.tasklist.blueprint.cdi/tasklist-cdi-persistence/1.0.0.SNAPSHOT</bundle>
+    </feature>
+
+</features>

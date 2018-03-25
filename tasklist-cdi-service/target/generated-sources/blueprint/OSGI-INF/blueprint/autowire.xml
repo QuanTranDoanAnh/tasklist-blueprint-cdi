@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+    <bean xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0" id="taskServiceRest" class="net.lr.tasklist.cdi.service.impl.TaskServiceRest" ext:field-injection="true" scope="prototype">
+        <property name="taskService" ref="taskService"/>
+    </bean>
+    <reference id="taskService" interface="net.lr.tasklist.blueprint.cdi.model.TaskService"/>
+</blueprint>

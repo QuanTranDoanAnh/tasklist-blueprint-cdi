@@ -1,0 +1,14 @@
+Meta-Persistence: \
+	META-INF/persistence.xml
+Import-Package: \
+	org.hibernate;resolution:=optional, \
+    org.hibernate.annotations;resolution:=optional, \
+    org.hibernate.cfg;resolution:=optional, \
+    org.hibernate.hql.ast;resolution:=optional, \
+    org.hibernate.type;resolution:=optional, \
+    org.hibernate.dialect;resolution:=optional, \
+    javax.persistence;resolution:=optional, \
+    javax.persistence.spi;resolution:=optional, \
+    javax.transaction.xa;resolution:=optional, \
+    org.h2;resolution:=optional, \
+    *
